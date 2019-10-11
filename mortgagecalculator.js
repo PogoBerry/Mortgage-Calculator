@@ -14,26 +14,33 @@ function calcMortgage() {
     } // if
 
     // Calculates the mortgage
+    let annualRate = 4.32;
+    let principal = 265000;
+    let mortgagePeriod = 15;
+    
     annualRate /= 100;
-
-    monthlyRate = (annualRate / 12) + 1;
+  
+    let monthlyRate = (annualRate / 12);
+    newMonthlyRate = parseFloat (monthlyRate.toFixed (4));
     
-    monthlyPay = mortgagePeriod * 12;
-
-    let result = Math.pow (monthlyRate, -monthlyPay);
-
-    result--;
-
-    result = monthlyRate / result;
-
-    let total = result * principal;
-
-    // Rounds the total to two decimal places
-    total = Math.round (total * 100) / 100;
+    monthlyPayNum = mortgagePeriod * 12;
+  
+    plusOne = newMonthlyRate++;
+  
+    let result = Math.pow (newMonthlyRate, -monthlyPayNum);
     
-    // Rounds the total further
-    total = Math.round (total);
-
+    result = 1 - result;
+  
+    result = parseFloat (result.toFixed (4));
+  
+    total = monthlyRate / result;
+  
+    total *= principal;
+  
+    total = total.toFixed ();
+  
+    total = parseFloat (total);
+    
     // Displays the monthly payment to the HTML document
     document.getElementById ("totalMortgage").style.display = "block";
     document.getElementById ("mortgage").innerHTML = total;

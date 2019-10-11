@@ -50,7 +50,7 @@ input {
 
 #principal {
     font-size: 14px;
-    color: #8E0E00;
+    color: rgb(32, 76, 170);
     background-color: #f7f7f7;
     width: 60%;
     padding: 5px 5px 8px 8px;
@@ -62,7 +62,7 @@ input {
     outline: none;
 }
 
-#interest {
+#annualRate {
     width: 60%;
     padding: 5px 5px 8px 8px;
     margin-left: 20px;
@@ -98,7 +98,7 @@ button {
 }
 
 button:hover {
-    background: #4c2827;
+    background: #1c51b4;
     border-bottom-color: #111;
 
 }
@@ -109,29 +109,37 @@ button:active {
 
 }
 
-#totalTip {
+#totalMortgage {
     font-size: 30px;
     margin-top: 5px;
     text-align: center;
 
 }
 
-#totalTip:before {
-    content: "Tip amount";
+#totalMortgage:before {
+    content: "Your Monthly Payments:";
     font-size: 20px;
     font-weight: bold;
     display: block;
-    text-transform: uppercase;
-
+    
 }
 
-#totalTip sup {
+#totalMortgage:after {
+    content: " a month";
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    
+}
+
+#totalMortgage sup {
     font-size: 20px;
     top: -18px;
 
 }
 
-#totalTip small {
+#totalMortgage small {
+    content: " a month";
     font-size: 20px;
     font-weight: bold;
     display: block;

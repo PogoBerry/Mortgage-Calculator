@@ -117,7 +117,7 @@ button:active {
 }
 
 #totalMortgage:before {
-    content: "Your Monthly Payments:";
+    content: "Your Mortgage:";
     font-size: 20px;
     font-weight: bold;
     display: block;

@@ -42,12 +42,13 @@ function calcMortgage() {
     // Displays the monthly payment to the HTML document
     document.getElementById ("totalMortgage").style.display = "block";
     document.getElementById ("mortgage").innerHTML = total;
+	document.getElementById ("mortgage").style.display = "inline";
 
-} // calculateTip
+} // calcMortgage
 
 // Hides the  amount upon loading 
-document.getElementById ("totalMortgage").style.display = "none";
-document.getElementById ("monthly").style.display = "none";
+document.getElementById ("mortgage").style.display = "none";
+/*document.getElementById ("monthly").style.display = "none";*/
 
 /* When a user clicks the 'Calculate' button, the calculateTip function
 is called */

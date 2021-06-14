@@ -10,20 +10,29 @@
 </head>
 
 <body>
-
+	
 <div id = "container">
     <h1> Mortgage Calculator </h1>
 <div id = "calculator">
+	
+	<!-- WR Code -->
+	
+	
+	<!-- End WR Code -->
+	
+	
+	
+	
+	
 
     <form>
-        <p> What is your principal balance? 
-        <p> $ 
-        <input id = "principal" type = "text" placeholder = "Ex. 100,000">
+        <p id="question1"><strong> What is your principal balance? 
+        </strong></p><p id="currency"><input id = "principal" type = "text" placeholder = "Ex. 100,000"></p>
 
-        <p> What is your annual interest rate? </p>
+       <p id="question2"><strong> What is your annual interest rate? </strong></p>
         <input id = "annualRate" type = "text" placeholder = "Ex. 3.92 "> %
     
-        <p> What is your mortgage period? </p>
+        <p id="question3"><strong> What is your mortgage period? </strong></p>
         <select id = "mortgagePeriod"> 
             
             <option disabled selected value = "0"> 
@@ -50,14 +59,20 @@
 
     </div>
     <!-- end of div element calculator-->
-
-    <div id = "totalMortgage" >
-        <sup> $ </sup> 
-            <span id = "mortgage"> 0.00 </span>
-            <small id = "monthly" > a month </small>
-    </div>
+ <div id = "totalMortgage"><p style="margin-left: 15px;"><strong>You're Mortgage is...</strong>
+   
+        
+          <strong><span id = "mortgage"> 0.00 </span></strong>
+          
+	<strong>a month!</strong></p></div>
     <!-- end of div element totalMortgage -->
 
+	
+ <button id = "redo" type = "button"> Try Again? </button>
+	
+	
+	
+	
 </div>
 <!-- end of div element container -->
 
